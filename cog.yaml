@@ -1,0 +1,21 @@
+# Configuration for Cog ⚙️
+# Reference: https://github.com/replicate/cog/blob/main/docs/yaml.md
+
+build:
+  gpu: true
+  system_packages:
+    - "libgl1-mesa-glx"
+    - "libglib2.0-0"
+    - "ffmpeg"
+  python_version: "3.11"
+  python_packages:
+    - "accelerate==0.23.0"
+    - "torch==2.0.1"
+    - "torchvision==0.15.2"
+    - "diffusers==0.22.3"
+    - "Pillow==10.1.0"
+    - "transformers==4.34.1"
+    - "opencv-python-headless==4.8.1.78"
+    - "controlnet-aux==0.0.7"
+    - "mediapipe==0.10.8"
+predict: "predict.py:Predictor"
